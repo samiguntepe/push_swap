@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/03/21 23:25:03 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/03/28 23:56:52 by sguntepe         ###   ########.fr       */
+/*   Created: 2023/03/29 01:17:52 by sguntepe          #+#    #+#             */
+/*   Updated: 2023/03/29 01:18:04 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc,char **argv)
-{
-	// t_stack	*stack_a;
-	
-	// stack_a = malloc(sizeof(t_stack));
-	// t_stack	*stack_b;
-	if (argc < 2)
-		exit(0);
-
-	arg_control(argv);
-	
-	return (0);
+int strcmp(const char* str1, const char* str2) {
+    while (*str1 && *str2 && (*str1 == *str2)) {
+        str1++;
+        str2++;
+    }
+    return *str1 - *str2;
 }
