@@ -6,12 +6,12 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:25:03 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/03/28 23:56:52 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/04/24 13:56:04 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+#include <stdio.h>
 int	main(int argc,char **argv)
 {
 	// t_stack	*stack_a;

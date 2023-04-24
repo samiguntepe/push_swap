@@ -1,9 +1,49 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   arg_control.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/04/24 12:34:59 by sguntepe          #+#    #+#             */
+/*   Updated: 2023/04/24 14:01:11 by sguntepe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 void	arg_control(char **argv)
 {
 	is_integer(argv);
 	overflow_int(argv);
+	is_duplicate(argv[1]);
+}
+
+void	is_duplicate(char *arg)
+{
+	int i;
+	// int j;
+
+	i = 0;
+		printf("%s\n",arg);
+	while (arg[i])
+	{
+		// if(arg[i+1] != '\0')
+		// 	j = i+1;
+
+		// while (arg[j])
+		// {
+		// 	// if(arg[i] != arg[j])
+		// 	// {
+		// 	// 	write(1,"Error\n",6);
+		// 	// 	write(1," duplicate",10);
+		// 	// 	exit(0);	
+		// 	// }
+			
+		// 	j++;
+		// }
+		i++;
+	}
 }
 
 int	is_number(char *arg)

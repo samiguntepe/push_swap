@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:25:07 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/03/29 00:57:23 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/04/24 13:51:39 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void	is_integer(char **argv);
 void	arg_control(char **argv);
 void	overflow_int(char **argv);
 long	ft_atol(const char *str);
+void	is_duplicate(char *arg);
 
 # endif
