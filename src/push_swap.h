@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:25:07 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/04/24 13:51:39 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:12:54 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,9 @@ int		is_number(char *arg);
 void	is_integer(char **argv);
 void	arg_control(char **argv);
 void	overflow_int(char **argv);
+void	push_numbers(char **argv, t_stack *root);
 long	ft_atol(const char *str);
-void	is_duplicate(char *arg);
+void	is_duplicate(char **argv);
+int		*all_num(char **argv);
 
 # endif

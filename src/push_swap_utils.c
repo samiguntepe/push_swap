@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:53:20 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/03/28 12:48:01 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/04/27 17:16:23 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,18 @@ int	top(t_stack *root)
 		iter = iter->next;
 	rvalue = iter->data;
 	return (rvalue);
+}
+
+void	push_numbers(char **argv, t_stack *root)
+{
+	int *nums;
+	int i;
+
+	i = 0;
+	nums = all_num(argv);
+	while(nums[i])
+	{
+		push(root,nums[i]);
+		i++;
+	}
 }
