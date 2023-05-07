@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:53:20 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/04/27 17:16:23 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/05/06 22:39:14 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,20 @@ int	pop(t_stack *root)
 	return (popped_value);
 }
 
+int	first_pop(t_stack *root)
+{
+	int		popped_value;
+	t_stack	*temp;
+	t_stack	*iter;
+	
+	iter = root;
+	temp = iter->next;
+	popped_value = temp->data;
+	iter->next = temp->next;
+	free(temp);
+	return (popped_value);
+}
+
 int	top(t_stack *root)
 {
 	t_stack	*iter;
@@ -63,13 +77,14 @@ int	top(t_stack *root)
 void	push_numbers(char **argv, t_stack *root)
 {
 	int *nums;
-	int i;
+	int len;
 
-	i = 0;
 	nums = all_num(argv);
-	while(nums[i])
+	len = ft_intlen(nums);
+	len--;	
+	while(len >= 0)
 	{
-		push(root,nums[i]);
-		i++;
+		push(root,nums[len]);
+		len--;	
 	}
 }

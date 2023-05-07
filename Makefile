@@ -6,13 +6,13 @@
 #    By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/21 23:25:18 by sguntepe          #+#    #+#              #
-#    Updated: 2023/03/21 23:25:19 by sguntepe         ###   ########.fr        #
+#    Updated: 2023/05/06 22:25:20 by sguntepe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 FILES	= $(shell find . -name "*.c")
-FLAGS	= -Wall -Wextra -Werror
+FLAGS	= -Wall -Wextra -Werror -g
 OBJS	= $(FILES:.c=.o)
 LIBFT	= include/libft/libft.a
 CC		= gcc

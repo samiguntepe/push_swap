@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:25:03 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/05/02 14:44:02 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/05/07 14:45:12 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <stdio.h>
 int	main(int argc,char **argv)
 {
+	(void)argc;
 	t_stack	*stack_a;
 	t_stack	*stack_b;
 	
@@ -22,25 +23,32 @@ int	main(int argc,char **argv)
 	
 	if (argc < 2)
 		exit(0);
-
 	arg_control(argv);
 	push_numbers(argv,stack_a);
+	
 	printf("\n");
-	sa(stack_a);
-	while (stack_a->next != NULL)
+
+	int i = 1;
+	while(stack_a->next != NULL)
 	{
-		if(stack_a->data != 0)
-			printf("%d",stack_a->data);
-		
-		if(stack_b->data != 0 && stack_a->data != 0)
-			printf("  %d\n",stack_b->data);
-		else if(stack_b->data == 0 && stack_a->data != 0)
-			printf("    \n");
+		if(stack_b->next != NULL)
+			printf("%d",stack_a->next->data);
+		else
+			printf("%d\n",stack_a->next->data);
+		i = 1;
+		while(i > 0 && stack_b->next != NULL)
+		{
+			printf("   %d\n",stack_b->next->data);
+			stack_b = stack_b->next;
+			i--;
+		}
 		stack_a = stack_a->next;
 	}
-	printf("%d\n",stack_a->data);
-		printf("-   -\nA   B\n\n");
-
+	if(stack_b->next != NULL)
+		printf("\n-   -\nA   B\n");
+	else
+		printf("-   -\nA   B\n");
+	
 	
 	
 	return (0);
