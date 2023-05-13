@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:25:07 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/05/09 19:29:47 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/05/13 14:10:27 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,10 @@
 typedef struct s_stack
 {
 	int				data;
+	int				index;
 	struct s_stack	*next;
 }	t_stack;
+
 
 
 t_stack	*push(t_stack *root, int num);
@@ -36,6 +38,7 @@ void	push_numbers(char **argv, t_stack *root);
 long	ft_atol(const char *str);
 void	is_duplicate(char **argv);
 int		*all_num(char **argv);
+void    put_index(t_stack *root);
 
 int	stack_count(t_stack *root);
 

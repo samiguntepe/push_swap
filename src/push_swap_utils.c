@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:53:20 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/05/09 15:28:43 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/05/13 14:09:01 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,9 @@ void	push_numbers(char **argv, t_stack *root)
 	i = 0;
 	while(nums[i])
 	{
+		root->index = i;
 		push(root,nums[i]);
-		i++;	
+		i++;
+		root = root->next;
 	}
 }
