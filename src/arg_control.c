@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/24 12:34:59 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/04/27 16:24:31 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/05/16 13:34:54 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	*all_num(char **argv)
 {
 	int		i;
 	int		j;
-	int	*nums;
+	int		*nums;
 
 	i = 0;
 	while (argv[i])

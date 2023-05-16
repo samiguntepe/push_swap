@@ -6,7 +6,7 @@
 /*   By: sguntepe <@student.42kocaeli.com.tr>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 23:25:03 by sguntepe          #+#    #+#             */
-/*   Updated: 2023/05/13 14:13:42 by sguntepe         ###   ########.fr       */
+/*   Updated: 2023/05/16 14:13:07 by sguntepe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,10 @@ int	main(int argc,char **argv)
 		exit(0);
 	arg_control(argv);
 	push_numbers(argv,stack_a);
-	int i = 5;
-	// ra(stack_a,1);
-	sa(stack_a,1);
-	while (i--)
-	{
-		printf("%d",stack_a->index);
-		stack_a = stack_a->next;
-	}
+	assign_tags(stack_a,argc);
+	// is_sorted(stack_a);
+	radix(stack_a,stack_b);
 	
-	write_terminal(stack_a, stack_b);
+	
+	
 }
